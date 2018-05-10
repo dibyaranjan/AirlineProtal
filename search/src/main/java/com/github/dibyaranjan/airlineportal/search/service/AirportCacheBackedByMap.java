@@ -1,5 +1,10 @@
 package com.github.dibyaranjan.airlineportal.search.service;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
+
 import com.github.dibyaranjan.airlineportal.cache.AirportCache;
 import com.github.dibyaranjan.airlineportal.framework.rest.comsumer.RestConsumer;
 import com.github.dibyaranjan.airlineportal.modelobjects.airport.Airport;
@@ -10,26 +15,16 @@ import com.github.dibyaranjan.airlineportal.search.modelobject.AirportLink;
 import com.github.dibyaranjan.airlineportal.search.modelobject.Cities;
 import com.github.dibyaranjan.airlineportal.search.modelobject.CityJson;
 import com.github.dibyaranjan.infra.converter.Converter;
-import org.springframework.web.client.RestTemplate;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.TreeMap;
 
 public class AirportCacheBackedByMap implements AirportCache {
     private static Map<String, Airport> cache = new TreeMap<>();
     private static Map<String, List<Airport>> cityCache = new TreeMap<>();
 
-    private RestTemplate restTemplate;
     private RestEndPointProperties endPointProperties;
     private RestConsumer<Cities> citiesConsumer;
     private RestConsumer<AirportJson> airportConsumer;
     private Converter converter;
-
-    public void setRestTemplate(RestTemplate restTemplate) {
-        this.restTemplate = restTemplate;
-    }
 
     public void setEndPointProperties(RestEndPointProperties endPointProperties) {
         this.endPointProperties = endPointProperties;

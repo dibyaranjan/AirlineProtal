@@ -7,6 +7,7 @@ import com.github.dibyaranjan.infra.converter.annotation.Convert;
 
 @Convert(target = City.class, source = CityJson.class)
 public class CityFromCityJsonConverter extends AbstractConverter{
+    @SuppressWarnings("unchecked")
     @Override
     protected <T, S> T doConvert(S sourceObject) {
         CityJson source = (CityJson) sourceObject;

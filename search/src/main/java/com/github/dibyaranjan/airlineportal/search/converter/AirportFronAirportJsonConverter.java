@@ -7,6 +7,7 @@ import com.github.dibyaranjan.infra.converter.annotation.Convert;
 @Convert(source = com.github.dibyaranjan.airlineportal.modelobjects.json.model.Airport.class, target = Airport.class)
 public class AirportFronAirportJsonConverter extends AbstractConverter {
 
+    @SuppressWarnings("unchecked")
     @Override
     protected <T, S> T doConvert(S sourceObject) {
         com.github.dibyaranjan.airlineportal.modelobjects.json.model.Airport source = (com.github.dibyaranjan.airlineportal.modelobjects

@@ -15,14 +15,12 @@ public class CacheConfiguration {
 
     @Bean(name = "airportCache")
     public AirportCache airportCache(RestTemplate restTemplate, RestEndPointProperties endPointProperties,
-                                     RestConsumer<Cities> citiesConsumer, RestConsumer<AirportJson> airportConsumer,
-                                     Converter converter) {
+            RestConsumer<Cities> citiesConsumer, RestConsumer<AirportJson> airportConsumer, Converter converter) {
         AirportCacheBackedByMap cache = new AirportCacheBackedByMap();
         cache.setAirportConsumer(airportConsumer);
         cache.setCitiesConsumer(citiesConsumer);
         cache.setConverter(converter);
         cache.setEndPointProperties(endPointProperties);
-        cache.setRestTemplate(restTemplate);
         cache.loadCache();
         return cache;
     }
