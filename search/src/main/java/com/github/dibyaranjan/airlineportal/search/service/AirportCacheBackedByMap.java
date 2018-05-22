@@ -75,7 +75,7 @@ public class AirportCacheBackedByMap implements AirportCache {
 
                     Airport airportVo = converter.convert(new Airport(), airportJson);
                     airportVo.setCity(cityVo);
-                    cache.put(airportVo.getCode(), airportVo);
+                    cache.put(airportVo.getCode().toUpperCase(), airportVo);
                     airportsForCity.add(airportVo);
                 });
             });

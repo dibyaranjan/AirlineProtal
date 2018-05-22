@@ -25,7 +25,8 @@ public class AirportDetailsFetcher {
     }
 
     public List<Airport> getAirportByFreeText(String string) {
-        Airport airportByIataCode = getAirport(string);
+        String freeText = string.toUpperCase();
+        Airport airportByIataCode = getAirport(freeText);
         if (airportByIataCode != null) {
             return Arrays.asList(airportByIataCode);
         }
@@ -33,7 +34,7 @@ public class AirportDetailsFetcher {
         List<Airport> airportsContainingFreeText = new ArrayList<>();
         List<Airport> allAirports = cache.getAllAirports();
         allAirports.parallelStream().forEach(airport -> {
-            if (airport.getCity().getName().contains(string)) {
+            if (airport.getCity().getName().toUpperCase().contains(freeText)) {
                 airportsContainingFreeText.add(airport);
             }
         });

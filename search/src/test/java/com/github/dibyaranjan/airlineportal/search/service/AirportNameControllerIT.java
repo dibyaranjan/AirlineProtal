@@ -1,7 +1,8 @@
 package com.github.dibyaranjan.airlineportal.search.service;
 
-import java.util.List;
-
+import com.github.dibyaranjan.airlineportal.modelobjects.airport.Airport;
+import com.github.dibyaranjan.airlineportal.modelobjects.city.City;
+import com.github.dibyaranjan.airlineportal.search.controller.AirportNameController;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -10,9 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.github.dibyaranjan.airlineportal.modelobjects.airport.Airport;
-import com.github.dibyaranjan.airlineportal.modelobjects.city.City;
-import com.github.dibyaranjan.airlineportal.search.controller.AirportNameController;
+import java.util.List;
 
 @RunWith(SpringRunner.class)
 @ContextConfiguration(classes = { AirportNameControllerConfiguration.class })
@@ -44,7 +43,7 @@ public class AirportNameControllerIT {
 
 	@Test
 	public void testControllerWithFreeText() {
-		List<Airport> actualAirport = controller.getAirportsByCity("Dubai");
+		List<Airport> actualAirport = controller.getAirportByFreeText("Dubai");
 			
 		Assert.assertTrue(
 				"Expected airport should be equals to actual airport",

@@ -1,9 +1,10 @@
 package com.github.dibyaranjan.airlineportal.configuration;
 
-import com.github.dibyaranjan.infra.converter.BaseConverter;
-import com.github.dibyaranjan.infra.converter.Converter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
+
+import com.github.dibyaranjan.infra.converter.BaseConverter;
+import com.github.dibyaranjan.infra.converter.Converter;
 
 @Component
 public class ConverterBean {

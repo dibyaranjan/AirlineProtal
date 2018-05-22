@@ -23,6 +23,7 @@
         <module>framework</module>
         <module>starter</module>
         <module>converter</module>
+        <module>frontend</module>
     </modules>
 
     <properties>
