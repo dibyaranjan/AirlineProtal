@@ -2,6 +2,7 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
     <parent>
         <groupId>com.github.dibyaranjan.airlineportal</groupId>
         <artifactId>aggregator</artifactId>
@@ -10,20 +11,19 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>starter</artifactId>
-
+    <artifactId>search</artifactId>
     <dependencies>
         <dependency>
             <groupId>com.github.dibyaranjan.airlineportal</groupId>
-            <artifactId>search</artifactId>
+            <artifactId>framework</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
+
         <dependency>
             <groupId>com.github.dibyaranjan.airlineportal</groupId>
-            <artifactId>configuration</artifactId>
+            <artifactId>model-objects</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
     </dependencies>
-
 
 </project>

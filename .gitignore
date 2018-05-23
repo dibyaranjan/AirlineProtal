@@ -1,3 +1,9 @@
+*/.gitignore
+
 */target/*
 .idea
 *.iml
+
+.project
+.settings
+.classpath
