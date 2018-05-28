@@ -16,6 +16,12 @@ public class RestEndPointProperties {
     @Value("${search-api-endpoint}")
     private String searchApiEndpoint;
 
+    @Value("${bargin-finder-max-endpoint}")
+    private String barginFinderEndpoint;
+
+    @Value("${low-fare-search-endpoint}")
+    private String lowFareSearchEndpoint;
+
     public String getAllCityApi() {
         return allCityApi;
     }
@@ -26,5 +32,13 @@ public class RestEndPointProperties {
 
     public String getSearchApiEndpoint() {
         return searchApiEndpoint;
+    }
+
+    public String getBarginFinderEndpoint() {
+        return barginFinderEndpoint;
+    }
+
+    public String getLowFareSearchEndpoint() {
+        return lowFareSearchEndpoint;
     }
 }

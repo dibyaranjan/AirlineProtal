@@ -1,6 +1,6 @@
 */.gitignore
 
-*/target/*
+**/target/*
 .idea
 *.iml
 

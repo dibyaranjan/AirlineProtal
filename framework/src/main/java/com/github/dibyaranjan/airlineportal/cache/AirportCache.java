@@ -1,8 +1,8 @@
 package com.github.dibyaranjan.airlineportal.cache;
 
-import com.github.dibyaranjan.airlineportal.modelobjects.airport.Airport;
-
 import java.util.List;
+
+import com.github.dibyaranjan.airlineportal.modelobjects.airport.Airport;
 
 public interface AirportCache extends Cache {
     List<Airport> getAllAirports();
